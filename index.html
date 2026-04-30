@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bloom like the Crocus</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════ HEADER ═══════════════ -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+
+        <!-- Logo: click to go home from any page -->
+        <a href="index.html" class="logo-link">
+          <!-- Crocus flower icon -->
+          <svg class="crocus-icon" viewBox="0 0 44 58" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <line x1="22" y1="44" x2="22" y2="56" stroke="#7EAD7E" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M22 52 C14 46 11 37 15 28" stroke="#7EAD7E" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <ellipse cx="22" cy="24" rx="8.5" ry="20" fill="#B08FCE" transform="rotate(-22 22 44)"/>
+            <ellipse cx="22" cy="24" rx="8.5" ry="20" fill="#B08FCE" transform="rotate(22 22 44)"/>
+            <ellipse cx="22" cy="24" rx="8.5" ry="20" fill="#D4B8EC"/>
+            <ellipse cx="22" cy="42" rx="5" ry="3.5" fill="#F2C55A" opacity="0.9"/>
+            <ellipse cx="22" cy="40" rx="2.5" ry="2" fill="#E8A820" opacity="0.7"/>
+          </svg>
+          <div>
+            <!-- EDIT: Change to your blog name -->
+            <div class="site-title">Bloom like the Crocus</div>
+            <!-- EDIT: Change to your own tagline -->
+            <div class="site-tagline">a little corner of my life</div>
+          </div>
+        </a>
+
+        <!-- Navigation -->
+        <nav class="main-nav">
+          <a href="index.html" class="active">Home</a>
+          <a href="about.html">About</a>
+        </nav>
+
+      </div>
+    </div>
+  </header>
+  <!-- ═══════════════ END HEADER ═══════════════ -->
+
+
+  <main class="container">
+
+    <!-- Welcome banner -->
+    <section class="welcome-section">
+      <!-- EDIT: Write your own welcome message here -->
+      <h2>Welcome ✿</h2>
+      <p>I'm so glad you found your way here. This is a quiet little space where I share my days, thoughts, and little moments of beauty.</p>
+    </section>
+
+
+    <!-- ═══════════════ POSTS LIST ═══════════════ -->
+    <section class="posts-section">
+      <h2 class="section-heading">Recent posts</h2>
+
+      <!-- ─────────────────────────────────────────────────
+           HOW TO ADD A NEW POST:
+           1. Copy the whole <article class="post-card"> block below
+           2. Paste it ABOVE this one (newest posts go first)
+           3. Change the date, title, excerpt, and the two links
+              to point to your new post file in the posts/ folder
+           ───────────────────────────────────────────────── -->
+
+      <!-- POST CARD — copy & paste this block for each new post -->
+      <article class="post-card">
+        <!-- EDIT: Change the date -->
+        <span class="post-date">April 30, 2026</span>
+
+        <h3 class="post-card-title">
+          <!-- EDIT: Change the link and the title -->
+          <a href="posts/first-spring.html">A First Hello from the Garden</a>
+        </h3>
+
+        <!-- EDIT: Write a short preview (2–3 sentences) -->
+        <p class="post-excerpt">
+          Every crocus starts underground, pushing up through cold soil long before the sun is warm enough. I think this little blog is a bit like that — small, hopeful, and just beginning to open.
+        </p>
+
+        <!-- EDIT: Change the link to match the post above -->
+        <a href="posts/first-spring.html" class="read-more">Read more →</a>
+      </article>
+      <!-- END POST CARD -->
+
+    </section>
+    <!-- ═══════════════ END POSTS LIST ═══════════════ -->
+
+  </main>
+
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="site-footer">
+    <!-- EDIT: Change to your name if you like -->
+    <p>Bloom like the Crocus <span class="flower">✿</span> written with love</p>
+  </footer>
+
+</body>
+</html>
