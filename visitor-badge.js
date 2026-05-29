@@ -1,7 +1,7 @@
 (function () {
   var SITE = "bloom-blog";
   // TODO: replace with your deployed healing-games URL once it's live
-  var API_BASE = "https://healing-corner.vercel.app";
+  var API_BASE = "https://jimmytheorangecat.com";
   var NUM_KEY = "visitor-num-" + SITE;
   var TICKED_KEY = "visitor-ticked-" + SITE;
 
