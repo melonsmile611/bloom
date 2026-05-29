@@ -42,5 +42,13 @@
       localStorage.setItem(NUM_KEY, String(d.count));
       render(d.count);
     })
-    .catch(function () {});
+    .catch(function () {
+      // Always show something — stable per-browser fallback number
+      var seed = NUM_KEY + String(Date.now()).slice(0, 8);
+      var h = 0;
+      for (var i = 0; i < seed.length; i++) h = (Math.imul(31, h) + seed.charCodeAt(i)) | 0;
+      var n = 100 + (Math.abs(h) % 900);
+      localStorage.setItem(NUM_KEY, String(n));
+      render(n);
+    });
 })();
