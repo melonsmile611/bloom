@@ -3,11 +3,196 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- EDIT: Change "Your Name" to your name -->
-  <title>About — Bloom like the Crocus</title>
+  <title>Shop — Bloom like the Crocus</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    .shop-page { padding: 2.5rem 0 5rem; }
+
+    .shop-page h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--purple-dark);
+      text-align: center;
+      margin-bottom: 0.4rem;
+    }
+
+    .shop-intro-block {
+      background: linear-gradient(135deg, var(--lavender-soft) 0%, #F4ECFB 100%);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.8rem 2.5rem;
+      margin: 1.6rem 0 2.8rem;
+      text-align: center;
+    }
+
+    .shop-intro-block p {
+      color: var(--text-muted);
+      font-size: 0.97rem;
+      line-height: 1.85;
+      max-width: 520px;
+      margin: 0 auto 0.6rem;
+    }
+
+    .shop-intro-block p:last-child { margin-bottom: 0; }
+
+    .section-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--purple-dark);
+      margin-bottom: 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .section-heading::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.3rem;
+      margin-bottom: 3rem;
+    }
+
+    .product-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 14px var(--shadow);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 32px var(--shadow);
+    }
+
+    .product-img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .product-img-placeholder {
+      width: 100%;
+      height: 190px;
+      background: linear-gradient(135deg, #E8D5F5 0%, #D4B8EC 50%, #C9AADE 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+    }
+
+    .product-body {
+      padding: 1.1rem 1.2rem 1.3rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .product-badge {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 0.45rem;
+    }
+
+    .product-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--purple-dark);
+      line-height: 1.35;
+      margin-bottom: 0.55rem;
+    }
+
+    .product-desc {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      line-height: 1.65;
+      flex: 1;
+      margin-bottom: 1rem;
+    }
+
+    .product-btn {
+      display: inline-block;
+      background: var(--saffron);
+      color: var(--text);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.38rem 1rem;
+      border-radius: 20px;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      align-self: flex-start;
+      transition: background 0.18s, transform 0.18s;
+    }
+
+    .product-btn:hover {
+      background: var(--saffron-dark);
+      color: var(--white);
+      transform: translateX(3px);
+    }
+
+    .shop-cta {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.6rem 2rem;
+      text-align: center;
+      box-shadow: 0 2px 14px var(--shadow);
+    }
+
+    .shop-cta p {
+      color: var(--text-muted);
+      font-size: 0.93rem;
+      margin-bottom: 1rem;
+    }
+
+    .shop-cta a {
+      display: inline-block;
+      background: var(--purple);
+      color: var(--white);
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 0.58rem 1.8rem;
+      border-radius: 24px;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: background 0.18s, transform 0.18s;
+    }
+
+    .shop-cta a:hover {
+      background: var(--purple-dark);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 580px) {
+      .shop-intro-block { padding: 1.4rem 1.2rem; }
+      .product-grid { grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+      .product-img, .product-img-placeholder { height: 150px; }
+      .product-body { padding: 0.85rem 0.9rem 1rem; }
+    }
+
+    @media (max-width: 400px) {
+      .product-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
@@ -32,49 +217,130 @@
         </a>
         <nav class="main-nav">
           <a href="index.html">Home</a>
-          <a href="about.html" class="active">About</a>
+          <a href="about.html" class="active">Shop</a>
         </nav>
       </div>
     </div>
   </header>
-  <!-- ═══════════════ END HEADER ═══════════════ -->
-
 
   <main class="container">
-    <section class="about-page">
+    <section class="shop-page">
 
-      <!-- EDIT: Change the page title -->
-      <h1>About me ✿</h1>
+      <h1>Things I Made ✿</h1>
 
-      <div class="about-card">
-
-        <!-- EDIT: Replace all of this with your own words.
-             Write as much or as little as you like.
-             Each <p> tag is a new paragraph. -->
-
+      <div class="shop-intro-block">
         <p>
-          Hello! I'm so glad you stopped by. I started this blog because I wanted a small, quiet space to share the everyday things that bring me joy — the changing of the seasons, a good cup of tea, little discoveries, and the slow work of growing into yourself.
+          Printables, planners, journals, and art — small things made with care, for the quiet work of living well.
         </p>
-
         <p>
-          The name comes from the crocus — one of the first flowers of spring. It blooms even through the last frost, small and determined and quietly beautiful. That felt right.
+          Everything is an instant digital download from my Etsy shop, StudioSarahDigital.
         </p>
+      </div>
 
-        <p>
-          This isn't a blog with a grand theme or a perfect aesthetic. It's simply a place to write, to remember, and to connect. If something here resonates with you, I'd love to hear from you.
-        </p>
+      <h2 class="section-heading">Digital Downloads</h2>
 
-        <!-- EDIT: Add your contact info, social links, etc. if you like -->
-        <!-- Example:
-        <p>You can reach me at: yourname@email.com</p>
-        -->
+      <div class="product-grid">
+
+        <a class="product-card" href="https://www.etsy.com/au/listing/4498953331/low-energy-life-booklet-chronic-fatigue" target="_blank" rel="noopener">
+          <img class="product-img" src="images/product-lowenergy.png" alt="Low Energy Life Booklet" />
+          <div class="product-body">
+            <span class="product-badge">✦ Instant Download</span>
+            <div class="product-title">Low Energy Life Booklet</div>
+            <p class="product-desc">Gentle strategies for chronic illness, burnout, and the days when everything costs too much.</p>
+            <span class="product-btn">View on Etsy →</span>
+          </div>
+        </a>
+
+        <a class="product-card" href="https://www.etsy.com/au/listing/4499002378/parkinsons-symptom-tracker-before-after" target="_blank" rel="noopener">
+          <img class="product-img" src="images/product-parkinsons.png" alt="Parkinson's Symptom Tracker" />
+          <div class="product-body">
+            <span class="product-badge">✦ Instant Download</span>
+            <div class="product-title">Parkinson's Symptom Tracker</div>
+            <p class="product-desc">Track symptoms before and after medication. Bring real evidence to every neurology appointment.</p>
+            <span class="product-btn">View on Etsy →</span>
+          </div>
+        </a>
+
+        <a class="product-card" href="https://www.etsy.com/au/listing/4500765719/dbs-surgery-recovery-planner-deep-brain" target="_blank" rel="noopener">
+          <img class="product-img" src="images/product-dbs.png" alt="DBS Surgery Recovery Planner" />
+          <div class="product-body">
+            <span class="product-badge">✦ Instant Download</span>
+            <div class="product-title">DBS Surgery Recovery Planner</div>
+            <p class="product-desc">Excel tracker + printable journal for recovering from deep brain stimulation surgery.</p>
+            <span class="product-btn">View on Etsy →</span>
+          </div>
+        </a>
+
+        <a class="product-card" href="https://www.etsy.com/au/listing/4506999634/7-day-guided-journal-mindfulness" target="_blank" rel="noopener">
+          <img class="product-img" src="images/product-notes-to-solitude.jpg" alt="7-Day Guided Journal" />
+          <div class="product-body">
+            <span class="product-badge">✦ Instant Download</span>
+            <div class="product-title">7-Day Guided Journal</div>
+            <p class="product-desc">Morning and evening prompts to slow down and come home to yourself. PDF + Notion template.</p>
+            <span class="product-btn">View on Etsy →</span>
+          </div>
+        </a>
+
+        <a class="product-card" href="https://www.etsy.com/au/listing/4500824110/30-day-healing-devotional-pdf-30" target="_blank" rel="noopener">
+          <div class="product-img-placeholder">✦</div>
+          <div class="product-body">
+            <span class="product-badge">✦ Instant Download</span>
+            <div class="product-title">30-Day Healing Devotional</div>
+            <p class="product-desc">Thirty days of guided devotional readings and reflections for healing, rest, and renewal.</p>
+            <span class="product-btn">View on Etsy →</span>
+          </div>
+        </a>
+
+        <a class="product-card" href="https://www.etsy.com/au/listing/4513517731/art-nouveau-harvest-queen-print-vintage" target="_blank" rel="noopener">
+          <img class="product-img" src="images/product-harvest-queen.png" alt="Art Nouveau Harvest Queen Print" />
+          <div class="product-body">
+            <span class="product-badge">✦ Instant Download</span>
+            <div class="product-title">Art Nouveau Harvest Queen Print</div>
+            <p class="product-desc">Vintage Art Nouveau wall art print — bold, beautiful, ready to print at home.</p>
+            <span class="product-btn">View on Etsy →</span>
+          </div>
+        </a>
+
+        <a class="product-card" href="https://www.etsy.com/au/listing/4514036201/faith-printable-wall-art-bundle-set-of-6" target="_blank" rel="noopener">
+          <img class="product-img" src="images/product-faith-bundle.png" alt="Faith Printable Wall Art Bundle" />
+          <div class="product-body">
+            <span class="product-badge">✦ Instant Download</span>
+            <div class="product-title">Faith Wall Art Bundle</div>
+            <p class="product-desc">Set of 6 faith-based printable wall art posters — scripture and quiet words for the home.</p>
+            <span class="product-btn">View on Etsy →</span>
+          </div>
+        </a>
+
+        <a class="product-card" href="https://www.etsy.com/au/listing/4514942199/vintage-botanical-plant-care-cards-12" target="_blank" rel="noopener">
+          <img class="product-img" src="images/product-plant-cards.png" alt="Vintage Botanical Plant Care Cards" />
+          <div class="product-body">
+            <span class="product-badge">✦ Instant Download</span>
+            <div class="product-title">Vintage Botanical Plant Care Cards</div>
+            <p class="product-desc">Set of 12 illustrated care cards for Australian indoor plants — print, cut, and display.</p>
+            <span class="product-btn">View on Etsy →</span>
+          </div>
+        </a>
+
+        <a class="product-card" href="https://www.etsy.com/au/listing/4515035808/printable-birthday-invitation-template" target="_blank" rel="noopener">
+          <img class="product-img" src="images/product-birthday-cards.jpg" alt="Birthday Invitation Template" />
+          <div class="product-body">
+            <span class="product-badge">✦ Instant Download</span>
+            <div class="product-title">Birthday Invitation Template</div>
+            <p class="product-desc">Editable Art Nouveau watercolour birthday invitations — open in browser, edit, and print.</p>
+            <span class="product-btn">View on Etsy →</span>
+          </div>
+        </a>
 
       </div>
+
+      <div class="shop-cta">
+        <p>See the full shop and all listings on Etsy.</p>
+        <a href="https://www.etsy.com/au/shop/StudioSarahDigital" target="_blank" rel="noopener">Visit StudioSarahDigital ✿</a>
+      </div>
+
     </section>
   </main>
 
-
-  <!-- ═══════════════ FOOTER ═══════════════ -->
   <footer class="site-footer">
     <p>Bloom like the Crocus <span class="flower">✿</span> written with love</p>
   </footer>
