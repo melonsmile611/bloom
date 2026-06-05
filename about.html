@@ -6,16 +6,18 @@
   <title>Shop — Bloom like the Crocus</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&family=Caveat:wght@700&display=swap" rel="stylesheet" />
   <style>
     .shop-page { padding: 2.5rem 0 5rem; }
 
     .shop-page h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      color: var(--purple-dark);
+      font-size: 1.2rem;
+      color: var(--text-muted);
       text-align: center;
       margin-bottom: 0.4rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
     }
 
     .shop-intro-block {
@@ -29,9 +31,14 @@
 
     .shop-intro-block {
       display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .shop-intro-row {
+      display: flex;
       align-items: center;
       gap: 1.8rem;
-      text-align: left;
     }
 
     .shop-intro-text { flex: 1; }
@@ -42,16 +49,17 @@
       object-fit: contain;
       border-radius: 50%;
       flex-shrink: 0;
-      order: 2;
     }
 
     .shop-slogan {
-      font-family: 'Great Vibes', cursive;
-      font-size: 2rem;
-      font-weight: 400;
+      font-family: 'Caveat', cursive;
+      font-size: 2.6rem;
+      font-weight: 700;
       color: var(--purple-dark) !important;
       margin-bottom: 0.7rem !important;
       line-height: 1.2;
+      text-align: center;
+      width: 100%;
     }
 
     .shop-intro-block p {
@@ -64,9 +72,9 @@
     .shop-intro-block p:last-child { margin-bottom: 0; }
 
     @media (max-width: 480px) {
-      .shop-intro-block { flex-direction: column; text-align: center; }
-      .sd-logo { order: 0; margin: 0 auto; }
-      .shop-slogan { font-size: 1.7rem; }
+      .shop-intro-row { flex-direction: column; text-align: center; }
+      .sd-logo { margin: 0 auto; }
+      .shop-slogan { font-size: 2rem; }
     }
 
     .section-heading {
@@ -261,17 +269,19 @@
       <h1>Things We Made ✿</h1>
 
       <div class="shop-intro-block">
-        <div class="shop-intro-text">
-          <p class="shop-slogan">Design with mind. Craft with heart.</p>
-          <p>
-            Real things for real life — planners for the hard days, journals for the quiet ones, art that means something.
-            Every single one is made by hand, with intention.
-          </p>
-          <p>
-            Instant digital downloads from <strong>StudioSarahDigital</strong> on Etsy. Print it, use it, keep it.
-          </p>
+        <p class="shop-slogan">Design with mind. Craft with heart.</p>
+        <div class="shop-intro-row">
+          <div class="shop-intro-text">
+            <p>
+              Real things for real life — planners for the hard days, journals for the quiet ones, art that means something.
+              Every single one is made by hand, with intention.
+            </p>
+            <p>
+              Instant digital downloads from <strong>StudioSarahDigital</strong> on Etsy. Print it, use it, keep it.
+            </p>
+          </div>
+          <img src="images/sd-logo.png" alt="StudioSarahDigital" class="sd-logo" />
         </div>
-        <img src="images/sd-logo.png" alt="StudioSarahDigital" class="sd-logo" />
       </div>
 
       <h2 class="section-heading">Digital Downloads</h2>
