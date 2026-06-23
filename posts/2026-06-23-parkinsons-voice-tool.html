@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>用三个 AI 帮帕金森患者做了个练声工具 — Bloom like the Crocus</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="../index.html" class="logo-link">
+          <svg class="crocus-icon" viewBox="0 0 44 58" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <line x1="22" y1="44" x2="22" y2="56" stroke="#7EAD7E" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M22 52 C14 46 11 37 15 28" stroke="#7EAD7E" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <ellipse cx="22" cy="24" rx="8.5" ry="20" fill="#B08FCE" transform="rotate(-22 22 44)"/>
+            <ellipse cx="22" cy="24" rx="8.5" ry="20" fill="#B08FCE" transform="rotate(22 22 44)"/>
+            <ellipse cx="22" cy="24" rx="8.5" ry="20" fill="#D4B8EC"/>
+            <ellipse cx="22" cy="42" rx="5" ry="3.5" fill="#F2C55A" opacity="0.9"/>
+            <ellipse cx="22" cy="40" rx="2.5" ry="2" fill="#E8A820" opacity="0.7"/>
+          </svg>
+          <div>
+            <div class="site-title">Bloom like the Crocus</div>
+            <div class="site-tagline">a little corner of my life</div>
+          </div>
+        </a>
+        <nav class="main-nav">
+          <a href="../index.html">Home</a>
+          <a href="../about.html">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="post-page">
+
+      <a href="../index.html" class="back-link">← Back to all posts</a>
+
+      <header class="post-header">
+        <span class="post-date">June 23, 2026</span>
+        <h1>用三个 AI 帮帕金森患者做了个练声工具</h1>
+      </header>
+
+      <div class="post-content">
+
+<p>起因是家人确诊帕金森。</p>
+
+<p>医生说，要坚持做发声训练。大声说话对帕金森患者来说是真正有治疗意义的事——不是鼓励，是有循证支撑的康复方案（LSVT LOUD）。</p>
+
+<p>但居家怎么练？对着空气喊，不知道有没有用力，不知道有没有进步，很难坚持。</p>
+
+<p>所以我决定自己做一个。</p>
+
+<hr>
+
+<p>分工是这样的：</p>
+
+<p><strong>用 Gemini</strong> 做整体方案和内容规划——练什么、怎么练、界面需要呈现哪些信息。</p>
+
+<p><strong>用 Kimi</strong> 做视觉设计——配色、卡片布局、整体风格。</p>
+
+<p><strong>用 Claude</strong> 修 bug——尤其是实时音频分析那块，音高检测的方向老是反的，反复调了好几轮才对。</p>
+
+<p>三个工具各有所长，拼在一起才跑通。</p>
+
+<hr>
+
+<p>做出来的功能：</p>
+
+<p><strong>持续发"啊——"20 秒</strong>，实时显示 dB 音量，看得见气息有没有断。</p>
+
+<p><strong>低到高滑音 / 高到低滑音</strong>，指针实时跟着音调走。</p>
+
+<p>每次练完自动记录数据，可以导出 PDF 报告给言语治疗师看。</p>
+
+<p><strong>4 周打卡日历</strong>，追踪是否坚持了日常训练。</p>
+
+<p>浏览器直接打开，不用下载，麦克风权限给一下就能用。</p>
+
+<p>健康的人用来嗓音热身、练肺活量也完全 OK。</p>
+
+<p>链接在这里：<a href="https://jimmytheorangecat.com/voice_training_zoo-English.html" target="_blank">jimmytheorangecat.com/voice_training_zoo-English.html</a></p>
+
+<hr>
+
+<p>这件事做完以后，我想了想。</p>
+
+<p>有时候人做一件事不是因为多有能力，是因为不做不行了。</p>
+
+<p>医生说"回家要多练"——这句话对家属来说，就是任务落在你头上了。</p>
+
+<p>我恰好会用这些工具。那就用。不浪费。</p>
+
+<p>如果这个工具只帮到一个人，也值了。</p>
+
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>Bloom like the Crocus <span class="flower">&#10047;</span> written with love</p>
+  </footer>
+
+</body>
+</html>
