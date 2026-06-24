@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>牛津的窗 — Bloom like the Crocus</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .scene-card {
+      margin: 40px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #f9f7f4;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    }
+    .scene-card canvas {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+    }
+    .scene-text {
+      padding: 24px 28px;
+    }
+    .scene-text h2 {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 20px;
+      color: #3a3a3a;
+      margin: 0 0 12px 0;
+      font-weight: 600;
+    }
+    .scene-text p {
+      margin: 0 0 10px 0;
+      line-height: 1.8;
+      color: #555;
+    }
+    .scene-text p:last-child { margin-bottom: 0; }
+    .post-date { font-family: 'Lato', sans-serif; }
+    .post-content { max-width: 680px; margin: 0 auto; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="../index.html" class="logo-link">
+          <svg class="crocus-icon" viewBox="0 0 44 58" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <line x1="22" y1="44" x2="22" y2="56" stroke="#7EAD7E" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M22 52 C14 46 11 37 15 28" stroke="#7EAD7E" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <ellipse cx="22" cy="24" rx="8.5" ry="20" fill="#B08FCE" transform="rotate(-22 22 44)"/>
+            <ellipse cx="22" cy="24" rx="8.5" ry="20" fill="#B08FCE" transform="rotate(22 22 44)"/>
+            <ellipse cx="22" cy="24" rx="8.5" ry="20" fill="#D4B8EC"/>
+            <ellipse cx="22" cy="42" rx="5" ry="3.5" fill="#F2C55A" opacity="0.9"/>
+            <ellipse cx="22" cy="40" rx="2.5" ry="2" fill="#E8A820" opacity="0.7"/>
+          </svg>
+          <div>
+            <div class="site-title">Bloom like the Crocus</div>
+            <div class="site-tagline">a little corner of my life</div>
+          </div>
+        </a>
+        <nav class="main-nav">
+          <a href="../index.html">Home</a>
+          <a href="../about.html">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="post-page">
+
+      <a href="../index.html" class="back-link">&larr; Back to all posts</a>
+
+      <header class="post-header">
+        <span class="post-date">June 24, 2026</span>
+        <h1>牛津的窗</h1>
+        <p style="color:#888; font-style:italic; margin-top:0;">读杨绛《我们仨》· 牛津篇</p>
+      </header>
+
+      <div class="post-content">
+
+        <p>最近重读《我们仨》，最打动我的不是古驿道的梦，而是牛津那几年。</p>
+
+        <p>杨绛写得很平淡——连形容词都舍不得多用。但你读着读着，发现那个壁炉前的冬天、那扇旧书店的橱窗、那顿焦掉的面包，已经在你眼前了。</p>
+
+        <p>她把幸福写得太轻了，轻到你得停下来才察觉它的重量。</p>
+
+        <p>这篇文章，是把牛津那段时光拆成了八个画面。配了插图，水彩风格，想留住那种"没什么大事，但每件小事都刚好"的感觉。</p>
+
+        <!-- Scene 1 -->
+        <div class="scene-card">
+          <canvas id="scene1" data-scene="0"></canvas>
+          <div class="scene-text">
+            <h2>一、远航</h2>
+            <p>1935 年夏天，两个人坐船去牛津。</p>
+            <p>那是一艘老旧的远洋客轮，灰蓝色的海水在船舷边翻涌。她站在甲板上，海风把她的短发吹乱了。他靠在栏杆边，手里攥着一本翻旧了的书。</p>
+            <p>没有想象中的激动。更多的是一种恍惚——真的要走了。离开战火将起的中国，去一个完全陌生的地方，开始一段完全陌生的生活。</p>
+            <p>杨绛后来写，锺书在船上晕船，躺了好几天。她去给他拿饭，他坐起来吃两口，又倒下去。她一边笑他，一边心里想：这个人啊，什么都不会。</p>
+            <p>但她没有后悔。</p>
+          </div>
+        </div>
+
+        <!-- Scene 2 -->
+        <div class="scene-card">
+          <canvas id="scene2" data-scene="1"></canvas>
+          <div class="scene-text">
+            <h2>二、安置</h2>
+            <p>牛津的老房子，灰绿色的墙纸，窗外是铅灰色的天空。</p>
+            <p>房间不大——一张床、一张书桌、一个壁炉。行李箱摊在地上，衣服还没收完。她蹲在箱子前，把书一本一本拿出来，摆在桌上。</p>
+            <p>那是他们全部的行李。书比衣服多。</p>
+            <p>锺书站在窗前，背着手看外面陌生的街道。牛津的街道安静得出奇，偶尔有一两个骑自行车的学生经过。他转过身来，对她笑了笑。</p>
+            <p>那个笑容的意思是：我们到了。</p>
+          </div>
+        </div>
+
+        <!-- Scene 3 -->
+        <div class="scene-card">
+          <canvas id="scene3" data-scene="2"></canvas>
+          <div class="scene-text">
+            <h2>三、壁炉前</h2>
+            <p>这是全书里最温暖的画面。</p>
+            <p>冬天的牛津，窗外下着雪。房间里壁炉烧得正旺，橘色的火光映在地毯上。两个年轻人坐在地毯上，各占一个角落，各看各的书。</p>
+            <p>偶尔抬头。有时候他想说什么，张了张嘴，又低头继续写。有时候她看到一段有意思的，轻轻笑一下，他也不问，就知道她笑什么。</p>
+            <p>这不是什么了不起的爱情场面。没有拥抱，没有表白。就是两个人，一间屋子，很多书，和一个噼啪响的壁炉。</p>
+            <p>但杨绛说，那是她一生中最快乐的时光。</p>
+          </div>
+        </div>
+
+        <!-- Scene 4 -->
+        <div class="scene-card">
+          <canvas id="scene4" data-scene="3"></canvas>
+          <div class="scene-text">
+            <h2>四、那句话</h2>
+            <p>也是一个冬天的晚上。</p>
+            <p>火快烧完了，只剩橘红色的余烬在炉膛里一明一暗。两个人还坐在地毯上，书已经合上了。锺书忽然侧过身来，很认真地说了一句话。</p>
+            <p>"我不要儿子。我要女儿——只要一个，像你的。"</p>
+            <p>杨绛后来写，她听了之后说："我不满意。我要一个像锺书的女儿。"</p>
+            <p>然后她加了一句——这很费想象。但确实如此。</p>
+            <p>后来他们真的有了阿瑗。女儿，又像锺书。</p>
+          </div>
+        </div>
+
+        <!-- Scene 5 -->
+        <div class="scene-card">
+          <canvas id="scene5" data-scene="4"></canvas>
+          <div class="scene-text">
+            <h2>五、早餐</h2>
+            <p>锺书不会做家务。</p>
+            <p>这件事在《我们仨》里被杨绛用最温柔的语气写了好几次。他打翻了墨水瓶，他把台灯弄坏了，他把门轴弄坏了。每次都是愁眉苦脸地来找她，说："我又做坏事了。"</p>
+            <p>但有一天早上，她醒来发现锺书不在身边。下楼一看，他系着一条明显不对尺寸的围裙，在厨房里忙活。桌上放着一个托盘：烤得有点焦的面包、煮得有点老的鸡蛋、一杯茶。</p>
+            <p>他把早餐端到她面前。那个表情她记了一辈子——又得意，又不好意思。</p>
+            <p>杨绛说，那是她吃过最好的早餐。</p>
+          </div>
+        </div>
+
+        <!-- Scene 6 -->
+        <div class="scene-card">
+          <canvas id="scene6" data-scene="5"></canvas>
+          <div class="scene-text">
+            <h2>六、旧书店</h2>
+            <p>牛津的窄巷子里有一家旧书店，门口挂着昏黄的灯。</p>
+            <p>那是他们最常去的地方。下了课，沿着石板路走过去，推门，铃铛响一下。店里堆满了书——架子上、地上、窗台上。老板是一个戴圆眼镜的老人，从来不推销，只是在他们出门的时候点一下头。</p>
+            <p>锺书蹲在书架前，能翻一个小时。杨绛站在另一边，翻旧诗集。偶尔他举起一本书，回头看她一眼，眼神在问"这本？"她摇摇头，他又放回去。</p>
+            <p>他们买不起很多书。但每次去，总要带一本回来。那一本，就是接下来几天的快乐。</p>
+          </div>
+        </div>
+
+        <!-- Scene 7 -->
+        <div class="scene-card">
+          <canvas id="scene7" data-scene="6"></canvas>
+          <div class="scene-text">
+            <h2>七、塞纳河边</h2>
+            <p>后来他们去了巴黎。</p>
+            <p>锺书在巴黎大学做研究，杨绛做旁听生。说是做研究，其实两个人大部分时间都花在了散步上。塞纳河边走，旧书摊前停，街角的咖啡馆里坐一个下午，只看人，不说话。</p>
+            <p>杨绛围了一条深红色的围巾，锺书戴着圆框眼镜。两个人并肩走着，有时候挽着手，有时候不挽。步伐很慢，像是时间本来就不赶。</p>
+            <p>那时的巴黎，秋天特别长。落叶铺在石板路上，踩上去沙沙响。路灯亮起来的时候，整条街都变成暖黄色的。</p>
+            <p>年轻真好。年轻的时候，穷也是好的。</p>
+          </div>
+        </div>
+
+        <!-- Scene 8 -->
+        <div class="scene-card">
+          <canvas id="scene8" data-scene="7"></canvas>
+          <div class="scene-text">
+            <h2>八、楼下</h2>
+            <p>很多很多年后，杨绛一个人回到了牛津。</p>
+            <p>那条街还在。那棵梧桐树还在。那栋红砖房子还在。</p>
+            <p>27 St Margaret's Road。</p>
+            <p>她站在楼下，抬头看二楼的窗口。窗子里亮着灯——不是她的灯了。窗帘也不是当年的颜色了。可是那个窗口的形状没有变，还是那个方方正正的旧式木窗，和八十年前一模一样。</p>
+            <p>她站在那里，看了一会儿。</p>
+            <p>楼下很安静。远处传来教堂的钟声，和当年一样。</p>
+            <p>然后她转身，走了。</p>
+            <p style="margin-top:16px; text-align:right; color:#999; font-style:italic;">——世间好物不坚牢，彩云易散琉璃脆。</p>
+          </div>
+        </div>
+
+        <hr style="margin: 48px 0;">
+
+        <p style="color:#888; font-style:italic;">后记：这篇文章的画面是 Canvas 手绘水彩风格，每个场景对应读书时脑子里浮现的画面。希望你也能想起那个属于你的、温暖的旧窗。</p>
+
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>Bloom like the Crocus <span class="flower">&9991;</span> written with love</p>
+  </footer>
+
+  <script>
+  const scenes = [
+    {
+      title: '远航',
+      colors: { sky1: '#b0c8d8', sky2: '#90a8c0', sea: '#7088a0', accent: '#f0b8c8' }
+    },
+    {
+      title: '安置',
+      colors: { sky1: '#c0c8b8', sky2: '#a8b0a0', sea: '#889880', accent: '#c8a888' }
+    },
+    {
+      title: '壁炉前',
+      colors: { sky1: '#d8b898', sky2: '#c8a080', sea: '#b08868', accent: '#f0c860' }
+    },
+    {
+      title: '那句话',
+      colors: { sky1: '#406878', sky2: '#385060', sea: '#2a3848', accent: '#d06030' }
+    },
+    {
+      title: '早餐',
+      colors: { sky1: '#f0dcc0', sky2: '#e0c8a8', sea: '#d0b898', accent: '#d08850' }
+    },
+    {
+      title: '旧书店',
+      colors: { sky1: '#607888', sky2: '#506070', sea: '#405060', accent: '#f0c880' }
+    },
+    {
+      title: '塞纳河边',
+      colors: { sky1: '#b8c8d0', sky2: '#a0b8c8', sea: '#88a8b8', accent: '#c83040' }
+    },
+    {
+      title: '楼下',
+      colors: { sky1: '#203040', sky2: '#182838', sea: '#102030', accent: '#e8c060' }
+    }
+  ];
+
+  function rand(a, b) { return Math.random() * (b - a) + a; }
+
+  function initScene(canvas, index) {
+    const parent = canvas.parentElement;
+    const w = parent.clientWidth || 680;
+    canvas.width = w;
+    canvas.height = w * 9 / 16;
+    const ctx = canvas.getContext('2d');
+    const cw = canvas.width, ch = canvas.height;
+    const sc = scenes[index];
+    const pal = sc.colors;
+
+    // Background wash
+    const grad = ctx.createLinearGradient(0, 0, 0, ch);
+    grad.addColorStop(0, pal.sky1);
+    grad.addColorStop(0.6, pal.sky2);
+    grad.addColorStop(1, pal.sea);
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, cw, ch);
+
+    // Watercolor stains
+    for (let s = 0; s < 25; s++) {
+      const x = rand(0, cw), y = rand(0, ch), r = rand(20, ch * 0.3);
+      ctx.beginPath();
+      ctx.arc(x, y, r, 0, Math.PI * 2);
+      const stainColors = [pal.sky1, pal.sky2, pal.accent, '#f5efe6'];
+      const c = stainColors[Math.floor(rand(0, stainColors.length - 0.01))];
+      ctx.fillStyle = c + Math.floor(rand(20, 60)).toString(16).padStart(2,'0');
+      ctx.fill();
+    }
+
+    // Scene-specific elements
+    ctx.save();
+
+    if (index === 0) {
+      // 远航 — deck + sea + two figures
+      // Horizon
+      ctx.beginPath();
+      ctx.moveTo(0, ch * 0.45);
+      ctx.lineTo(cw, ch * 0.43);
+      ctx.strokeStyle = 'rgba(100,130,160,0.4)';
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+      // Waves
+      for (let wv = 0; wv < 10; wv++) {
+        ctx.beginPath();
+        const wy = ch * 0.47 + wv * 8;
+        for (let x = 0; x <= cw; x += 3) {
+          const yy = wy + Math.sin(x * 0.025 + wv * 1.1) * 3 + Math.sin(x * 0.05 + wv * 2.5) * 1.5;
+          x === 0 ? ctx.moveTo(x, yy) : ctx.lineTo(x, yy);
+        }
+        ctx.strokeStyle = `rgba(100,140,180,${0.06 + wv * 0.015})`;
+        ctx.lineWidth = 1;
+        ctx.stroke();
+      }
+      // Ship railing
+      ctx.strokeStyle = 'rgba(58,42,61,0.35)';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(cw * 0.05, ch * 0.27);
+      ctx.lineTo(cw * 0.95, ch * 0.25);
+      ctx.stroke();
+      // Two figures
+      ctx.beginPath();
+      ctx.ellipse(cw * 0.38, ch * 0.32, 7, 13, 0, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(160,130,160,0.6)';
+      ctx.fill();
+      ctx.beginPath();
+      ctx.ellipse(cw * 0.46, ch * 0.31, 9, 15, 0, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(58,42,61,0.4)';
+      ctx.fill();
+      // Pink scarf
+      ctx.beginPath();
+      ctx.moveTo(cw * 0.46, ch * 0.31);
+      ctx.lineTo(cw * 0.6, ch * 0.24);
+      ctx.lineTo(cw * 0.57, ch * 0.27);
+      ctx.closePath();
+      ctx.fillStyle = 'rgba(240,184,200,0.5)';
+      ctx.fill();
+      // Seagull
+      ctx.beginPath();
+      ctx.arc(cw * 0.8, ch * 0.08, 2, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(200,200,210,0.5)';
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(cw * 0.75, ch * 0.12, 1.5, 0, Math.PI * 2);
+      ctx.fill();
+
+    } else if (index === 1) {
+      // 安置 — room with window + suitcase + books
+      // Window
+      const wx = cw * 0.55, wy = ch * 0.08, ww = cw * 0.35, wh = ch * 0.5;
+      ctx.fillStyle = 'rgba(176,200,216,0.6)';
+      ctx.fillRect(wx, wy, ww, wh);
+      ctx.strokeStyle = 'rgba(58,42,61,0.3)';
+      ctx.lineWidth = 2.5;
+      ctx.strokeRect(wx, wy, ww, wh);
+      // Window cross
+      ctx.beginPath();
+      ctx.moveTo(wx + ww/2, wy); ctx.lineTo(wx + ww/2, wy + wh);
+      ctx.moveTo(wx, wy + wh/2); ctx.lineTo(wx + ww, wy + wh/2);
+      ctx.stroke();
+      // Grey sky through window
+      ctx.fillStyle = 'rgba(160,170,180,0.15)';
+      ctx.fillRect(wx + 3, wy + 3, ww - 6, wh - 6);
+      // Table
+      ctx.fillStyle = 'rgba(184,160,136,0.55)';
+      ctx.fillRect(cw * 0.04, ch * 0.52, cw * 0.45, ch * 0.03);
+      // Books on table
+      const bCols = ['#a04040','#4060a0','#508050','#804060','#c08040'];
+      for (let b = 0; b < 6; b++) {
+        ctx.fillStyle = bCols[b % 5] + '60';
+        ctx.fillRect(cw * 0.07 + b * 20, ch * 0.47 - b * 2, 11, ch * 0.05 + b * 1.5);
+      }
+      // Open suitcase
+      ctx.beginPath();
+      ctx.ellipse(cw * 0.22, ch * 0.72, 55, 28, -0.08, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(160,144,112,0.5)';
+      ctx.fill();
+      ctx.strokeStyle = 'rgba(136,120,96,0.5)';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+      // Figure at window
+      ctx.beginPath();
+      ctx.ellipse(cw * 0.68, ch * 0.42, 6, 14, 0, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(58,42,61,0.35)';
+      ctx.fill();
+
+    } else if (index === 2) {
+      // 壁炉前 — THE ICONIC SCENE
+      // Fireplace
+      ctx.fillStyle = 'rgba(192,160,136,0.6)';
+      ctx.fillRect(cw * 0.22, ch * 0.25, cw * 0.56, ch * 0.55);
+      ctx.strokeStyle = 'rgba(160,136,112,0.45)';
+      ctx.lineWidth = 3;
+      ctx.strokeRect(cw * 0.22, ch * 0.25, cw * 0.56, ch * 0.55);
+      // Fire glow
+      const fg = ctx.createRadialGradient(cw * 0.5, ch * 0.6, 10, cw * 0.5, ch * 0.65, cw * 0.35);
+      fg.addColorStop(0, 'rgba(240,192,128,0.5)');
+      fg.addColorStop(0.5, 'rgba(224,160,96,0.25)');
+      fg.addColorStop(1, 'rgba(208,128,64,0)');
+      ctx.fillStyle = fg;
+      ctx.fillRect(0, 0, cw, ch);
+      // Fire flames
+      for (let f = 0; f < 8; f++) {
+        const fx = cw * 0.35 + rand(0, cw * 0.3);
+        const fy = ch * 0.55 - rand(0, ch * 0.1);
+        ctx.beginPath();
+        ctx.ellipse(fx, fy, rand(4, 12), rand(10, 30), 0, 0, Math.PI * 2);
+        const warm = ['#f0c060','#e8a040','#d08030','#f0d080'];
+        ctx.fillStyle = warm[f % 4] + '40';
+        ctx.fill();
+      }
+      // Figure — woman left
+      ctx.beginPath();
+      ctx.ellipse(cw * 0.32, ch * 0.6, 13, 20, 0.08, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(240,184,200,0.55)';
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(cw * 0.32, ch * 0.53, 9, Math.PI, 0);
+      ctx.fillStyle = 'rgba(58,42,61,0.5)';
+      ctx.fill();
+      // Figure — man right
+      ctx.beginPath();
+      ctx.ellipse(cw * 0.6, ch * 0.61, 14, 22, -0.08, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(168,192,216,0.55)';
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(cw * 0.6, ch * 0.54, 8, Math.PI, 0);
+      ctx.fillStyle = 'rgba(58,42,61,0.5)';
+      ctx.fill();
+      // Books on rug
+      ctx.fillStyle = 'rgba(160,64,64,0.4)';
+      ctx.fillRect(cw * 0.38, ch * 0.58, 12, 16);
+      ctx.fillStyle = 'rgba(64,96,160,0.4)';
+      ctx.fillRect(cw * 0.42, ch * 0.6, 10, 14);
+      ctx.fillStyle = 'rgba(64,128,80,0.4)';
+      ctx.fillRect(cw * 0.52, ch * 0.59, 14, 12);
+      // Snow outside
+      for (let s = 0; s < 50; s++) {
+        ctx.beginPath();
+        ctx.arc(rand(0, cw), rand(0, ch * 0.28), rand(1, 3), 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(240,240,248,${rand(0.2, 0.5)})`;
+        ctx.fill();
+      }
+
+    } else if (index === 3) {
+      // 那句话 — dying fire, intimate words
+      ctx.fillStyle = 'rgba(50,65,80,0.4)';
+      ctx.fillRect(0, 0, cw, ch);
+      // Fireplace darker
+      ctx.fillStyle = 'rgba(100,90,80,0.5)';
+      ctx.fillRect(cw * 0.25, ch * 0.28, cw * 0.5, ch * 0.52);
+      // Embers
+      for (let e = 0; e < 12; e++) {
+        ctx.beginPath();
+        ctx.arc(cw * 0.38 + rand(0, cw * 0.24), ch * 0.55 - rand(0, ch * 0.06), rand(2, 6), 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(208,96,48,${rand(0.2, 0.5)})`;
+        ctx.fill();
+      }
+      // Ember glow
+      const eg = ctx.createRadialGradient(cw * 0.5, ch * 0.55, 5, cw * 0.5, ch * 0.55, cw * 0.2);
+      eg.addColorStop(0, 'rgba(208,96,48,0.2)');
+      eg.addColorStop(1, 'rgba(208,96,48,0)');
+      ctx.fillStyle = eg;
+      ctx.fillRect(0, 0, cw, ch);
+      // Figure — man leaning toward woman
+      ctx.save();
+      ctx.translate(cw * 0.56, ch * 0.54);
+      ctx.rotate(-0.12);
+      ctx.beginPath();
+      ctx.ellipse(0, 0, 11, 18, 0, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(168,192,216,0.6)';
+      ctx.fill();
+      ctx.restore();
+      // Figure — woman
+      ctx.beginPath();
+      ctx.ellipse(cw * 0.38, ch * 0.58, 10, 16, 0.04, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(240,184,200,0.6)';
+      ctx.fill();
+      // Book on her lap
+      ctx.fillStyle = 'rgba(160,64,64,0.5)';
+      ctx.fillRect(cw * 0.34, ch * 0.55, 7, 9);
+
+    } else if (index === 4) {
+      // 早餐 — morning light, kitchen
+      // Window with morning light
+      ctx.fillStyle = 'rgba(248,232,192,0.15)';
+      ctx.fillRect(cw * 0.5, 0, cw * 0.5, ch);
+      // Table
+      ctx.fillStyle = 'rgba(200,184,152,0.5)';
+      ctx.fillRect(cw * 0.08, ch * 0.55, cw * 0.84, ch * 0.03);
+      // Plate
+      ctx.beginPath();
+      ctx.ellipse(cw * 0.38, ch * 0.52, 22, 15, 0, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(240,240,240,0.5)';
+      ctx.fill();
+      ctx.strokeStyle = 'rgba(208,208,208,0.5)';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+      // Burnt toast
+      ctx.fillStyle = 'rgba(192,128,80,0.6)';
+      ctx.fillRect(cw * 0.3, ch * 0.47, 16, 14);
+      ctx.fillStyle = 'rgba(160,96,48,0.7)';
+      ctx.fillRect(cw * 0.29, ch * 0.46, 18, 3);
+      // Tea cup
+      ctx.fillStyle = 'rgba(232,224,208,0.5)';
+      ctx.beginPath();
+      ctx.ellipse(cw * 0.5, ch * 0.51, 10, 6, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = 'rgba(200,160,96,0.35)';
+      ctx.fillRect(cw * 0.47, ch * 0.47, 6, 4);
+      // Figure — man in apron
+      ctx.beginPath();
+      ctx.ellipse(cw * 0.68, ch * 0.44, 10, 18, -0.08, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(168,192,216,0.5)';
+      ctx.fill();
+      ctx.fillStyle = 'rgba(232,224,208,0.4)';
+      ctx.fillRect(cw * 0.64, ch * 0.41, 8, 16);
+      // Figure — woman seated
+      ctx.beginPath();
+      ctx.ellipse(cw * 0.22, ch * 0.57, 11, 17, 0.08, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(240,184,200,0.55)';
+      ctx.fill();
+      // Steaming tea
+      for (let st = 0; st < 5; st++) {
+        ctx.beginPath();
+        ctx.arc(cw * 0.5 + rand(-3, 3), ch * 0.44 - rand(0, ch * 0.04), rand(1, 3), 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(200,200,200,0.15)';
+        ctx.fill();
+      }
+
+    } else if (index === 5) {
+      // 旧书店 — narrow lane, warm lamp
+      // Night sky
+      ctx.fillStyle = 'rgba(50,65,80,0.3)';
+      ctx.fillRect(0, 0, cw, ch);
+      // Bookshop window
+      const bw = cw * 0.55, bh = ch * 0.6, bx = cw * 0.04, by = ch * 0.12;
+      ctx.fillStyle = 'rgba(216,192,128,0.4)';
+      ctx.fillRect(bx, by, bw, bh);
+      ctx.strokeStyle = 'rgba(184,160,112,0.4)';
+      ctx.lineWidth = 2;
+      ctx.strokeRect(bx, by, bw, bh);
+      // Books in window
+      for (let b = 0; b < 15; b++) {
+        ctx.fillStyle = ['#604040','#406060','#604060','#606040'][b % 4] + '50';
+        ctx.fillRect(bx + 4 + (b % 5) * 18, by + 8 + Math.floor(b / 5) * 30, 14, 22);
+      }
+      // Lamp glow
+      const lg = ctx.createRadialGradient(cw * 0.78, ch * 0.2, 5, cw * 0.78, ch * 0.2, 80);
+      lg.addColorStop(0, 'rgba(240,208,144,0.4)');
+      lg.addColorStop(1, 'rgba(240,208,144,0)');
+      ctx.fillStyle = lg;
+      ctx.fillRect(cw * 0.4, 0, cw * 0.6, ch * 0.6);
+      // Lamp post
+      ctx.fillStyle = 'rgba(96,96,112,0.5)';
+      ctx.fillRect(cw * 0.76, ch * 0.12, 3, ch * 0.35);
+      ctx.beginPath();
+      ctx.arc(cw * 0.775, ch * 0.12, 7, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(240,208,144,0.3)';
+      ctx.fill();
+      // Figure — man crouching
+      ctx.beginPath();
+      ctx.ellipse(cw * 0.2, ch * 0.64, 8, 13, -0.08, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(168,192,216,0.5)';
+      ctx.fill();
+      // Figure — woman standing
+      ctx.beginPath();
+      ctx.ellipse(cw * 0.34, ch * 0.52, 7, 16, 0.04, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(240,184,200,0.55)';
+      ctx.fill();
+      // Wet cobblestones
+      ctx.fillStyle = 'rgba(160,176,192,0.1)';
+      ctx.fillRect(0, ch * 0.88, cw, ch * 0.12);
+
+    } else if (index === 6) {
+      // 塞纳河边 — Paris, walking, red scarf
+      // Seine river
+      ctx.fillStyle = 'rgba(148,176,200,0.3)';
+      ctx.fillRect(0, ch * 0.52, cw, ch * 0.35);
+      // Ripples
+      for (let r = 0; r < 12; r++) {
+        ctx.beginPath();
+        const ry = ch * 0.58 + r * 8;
+        for (let x = 0; x <= cw; x += 3) {
+          const yy = ry + Math.sin(x * 0.015 + r * 0.8) * 2;
+          x === 0 ? ctx.moveTo(x, yy) : ctx.lineTo(x, yy);
+        }
+        ctx.strokeStyle = `rgba(180,200,220,${0.08 + r * 0.01})`;
+        ctx.lineWidth = 0.8;
+        ctx.stroke();
+      }
+      // Bridge arch
+      ctx.beginPath();
+      ctx.arc(cw * 0.45, ch * 0.52, cw * 0.2, Math.PI, 0);
+      ctx.strokeStyle = 'rgba(150,140,130,0.35)';
+      ctx.lineWidth = 4;
+      ctx.stroke();
+      // Buildings
+      ctx.fillStyle = 'rgba(190,180,170,0.35)';
+      ctx.fillRect(0, ch * 0.05, cw * 0.3, ch * 0.35);
+      ctx.fillRect(cw * 0.35, ch * 0.08, cw * 0.25, ch * 0.3);
+      ctx.fillRect(cw * 0.65, ch * 0.06, cw * 0.35, ch * 0.32);
+      // Trees along river
+      for (let t = 0; t < 5; t++) {
+        ctx.fillStyle = 'rgba(100,160,100,0.3)';
+        const tx = cw * 0.05 + t * cw * 0.2;
+        ctx.beginPath();
+        ctx.arc(tx, ch * 0.42, 15, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.fillRect(tx - 2, ch * 0.47, 4, ch * 0.08);
+      }
+      // Two figures walking
+      ctx.beginPath();
+      ctx.ellipse(cw * 0.45, ch * 0.48, 6, 14, 0, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(58,42,61,0.4)';
+      ctx.fill();
+      ctx.beginPath();
+      ctx.ellipse(cw * 0.49, ch * 0.49, 5, 13, 0, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(160,130,160,0.4)';
+      ctx.fill();
+      // Red scarf
+      ctx.fillStyle = 'rgba(200,48,64,0.5)';
+      ctx.beginPath();
+      ctx.moveTo(cw * 0.49, ch * 0.43);
+      ctx.lineTo(cw * 0.56, ch * 0.38);
+      ctx.lineTo(cw * 0.54, ch * 0.41);
+      ctx.closePath();
+      ctx.fill();
+      // Lamp posts
+      ctx.fillStyle = 'rgba(80,80,90,0.4)';
+      ctx.fillRect(cw * 0.15, ch * 0.35, 2, ch * 0.18);
+      ctx.fillRect(cw * 0.72, ch * 0.33, 2, ch * 0.2);
+      ctx.beginPath();
+      ctx.arc(cw * 0.16, ch * 0.35, 4, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(240,208,144,0.25)';
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(cw * 0.73, ch * 0.33, 4, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(240,208,144,0.25)';
+      ctx.fill();
+
+    } else if (index === 7) {
+      // 楼下 — exterior, red brick, glowing window, 80 years later
+      // Night sky
+      ctx.fillStyle = 'rgba(30,45,60,0.5)';
+      ctx.fillRect(0, 0, cw, ch);
+      // Building
+      ctx.fillStyle = 'rgba(120,100,90,0.45)';
+      ctx.fillRect(cw * 0.18, ch * 0.08, cw * 0.55, ch * 0.72);
+      ctx.strokeStyle = 'rgba(80,65,55,0.4)';
+      ctx.lineWidth = 2;
+      ctx.strokeRect(cw * 0.18, ch * 0.08, cw * 0.55, ch * 0.72);
+      // Roof
+      ctx.beginPath();
+      ctx.moveTo(cw * 0.12, ch * 0.08);
+      ctx.lineTo(cw * 0.455, ch * 0.01);
+      ctx.lineTo(cw * 0.79, ch * 0.08);
+      ctx.closePath();
+      ctx.fillStyle = 'rgba(80,55,50,0.5)';
+      ctx.fill();
+      // Glowing window — 2nd floor
+      const gx = cw * 0.37, gy = ch * 0.2, gw = cw * 0.17, gh = ch * 0.18;
+      ctx.fillStyle = 'rgba(240,216,160,0.6)';
+      ctx.fillRect(gx, gy, gw, gh);
+      // Window glow
+      const wg = ctx.createRadialGradient(gx + gw/2, gy + gh/2, 5, gx + gw/2, gy + gh/2, 100);
+      wg.addColorStop(0, 'rgba(240,216,160,0.3)');
+      wg.addColorStop(1, 'rgba(240,216,160,0)');
+      ctx.fillStyle = wg;
+      ctx.fillRect(0, 0, cw, ch);
+      // Silhouette at window
+      ctx.beginPath();
+      ctx.ellipse(gx + gw/2, gy + gh * 0.5, 4, 10, 0, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(80,60,55,0.3)';
+      ctx.fill();
+      // Figure standing below — the narrator, looking up
+      ctx.beginPath();
+      ctx.ellipse(cw * 0.52, ch * 0.82, 4, 11, 0, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(100,100,120,0.35)';
+      ctx.fill();
+      // Snow falling
+      for (let s = 0; s < 60; s++) {
+        ctx.beginPath();
+        ctx.arc(rand(0, cw), rand(0, ch), rand(1, 3), 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(240,240,248,${rand(0.15, 0.45)})`;
+        ctx.fill();
+      }
+      // Street lamp
+      ctx.fillStyle = 'rgba(80,80,96,0.5)';
+      ctx.fillRect(cw * 0.82, ch * 0.18, 2.5, ch * 0.45);
+      ctx.beginPath();
+      ctx.arc(cw * 0.833, ch * 0.18, 5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(240,208,144,0.3)';
+      ctx.fill();
+      const lg2 = ctx.createRadialGradient(cw * 0.833, ch * 0.18, 5, cw * 0.833, ch * 0.18, 60);
+      lg2.addColorStop(0, 'rgba(240,208,144,0.2)');
+      lg2.addColorStop(1, 'rgba(240,208,144,0)');
+      ctx.fillStyle = lg2;
+      ctx.fillRect(cw * 0.6, ch * 0.15, cw * 0.4, ch * 0.6);
+      // Wet pavement reflection
+      ctx.fillStyle = 'rgba(160,176,192,0.1)';
+      ctx.fillRect(0, ch * 0.88, cw, ch * 0.12);
+    }
+
+    ctx.restore();
+
+    // Soft vignette
+    const vg = ctx.createRadialGradient(cw/2, ch/2, ch * 0.35, cw/2, ch/2, ch * 0.75);
+    vg.addColorStop(0, 'rgba(0,0,0,0)');
+    vg.addColorStop(1, 'rgba(0,0,0,0.12)');
+    ctx.fillStyle = vg;
+    ctx.fillRect(0, 0, cw, ch);
+
+    // Pencil border
+    ctx.strokeStyle = 'rgba(58,42,61,0.2)';
+    ctx.lineWidth = 1.2;
+    ctx.strokeRect(3, 3, cw - 6, ch - 6);
+  }
+
+  // Render all scenes
+  function renderAll() {
+    document.querySelectorAll('[data-scene]').forEach(canvas => {
+      const idx = parseInt(canvas.dataset.scene);
+      initScene(canvas, idx);
+    });
+  }
+
+  window.addEventListener('load', renderAll);
+  window.addEventListener('resize', () => setTimeout(renderAll, 300));
+  </script>
+
+</body>
+</html>
