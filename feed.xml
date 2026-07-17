@@ -6,7 +6,14 @@
     <description>a little corner of my life — 中文随笔与读书笔记</description>
     <language>zh-CN</language>
     <atom:link href="https://bloomlikecrocus.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 15 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>把AI当实习生后，它给了我一个印章设计</title>
+      <link>https://bloomlikecrocus.com/posts/2026-07-17-ai-intern-stamp-design.html</link>
+      <guid isPermaLink="true">https://bloomlikecrocus.com/posts/2026-07-17-ai-intern-stamp-design.html</guid>
+      <pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
+      <description>让Claude Code做视频字体排版，从下载一堆字体到想出印章设计的意外惊喜——当我把AI当实习生来训练后，它给我的创意远比我一个人闷头干要多、要新鲜。还聊了用AI点评摄影角度，和姜思达说AI写作像现代八股文的触动。</description>
+    </item>
     <item>
       <title>读《一生的旅程》—— 把坏消息变成可以解决的问题</title>
       <link>https://bloomlikecrocus.com/posts/2026-07-15-the-ride-of-a-lifetime.html</link>
