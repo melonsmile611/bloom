@@ -24,11 +24,16 @@
           <svg class="crocus-icon" viewBox="0 0 44 58" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <line x1="22" y1="44" x2="22" y2="56" stroke="#7EAD7E" stroke-width="2.5" stroke-linecap="round"/>
             <path d="M22 52 C14 46 11 37 15 28" stroke="#7EAD7E" stroke-width="2" fill="none" stroke-linecap="round"/>
-            <ellipse cx="22" cy="24" rx="8.5" ry="20" fill="#B08FCE" transform="rotate(-22 22 44)"/>
-            <ellipse cx="22" cy="24" rx="8.5" ry="20" fill="#B08FCE" transform="rotate(22 22 44)"/>
-            <ellipse cx="22" cy="24" rx="8.5" ry="20" fill="#D4B8EC"/>
-            <ellipse cx="22" cy="42" rx="5" ry="3.5" fill="#F2C55A" opacity="0.9"/>
-            <ellipse cx="22" cy="40" rx="2.5" ry="2" fill="#E8A820" opacity="0.7"/>
+            <g class="petal petal-1"><ellipse cx="22" cy="24" rx="7" ry="20" fill="#B08FCE"/></g>
+            <g class="petal petal-2"><ellipse cx="22" cy="24" rx="7" ry="20" fill="#C4A0DC"/></g>
+            <g class="petal petal-3"><ellipse cx="22" cy="24" rx="7" ry="20" fill="#D4B8EC"/></g>
+            <g class="petal petal-4"><ellipse cx="22" cy="24" rx="7" ry="20" fill="#D4B8EC"/></g>
+            <g class="petal petal-5"><ellipse cx="22" cy="24" rx="7" ry="20" fill="#C4A0DC"/></g>
+            <g class="petal petal-6"><ellipse cx="22" cy="24" rx="7" ry="20" fill="#B08FCE"/></g>
+            <g class="stamen">
+              <ellipse cx="22" cy="42" rx="5" ry="3.5" fill="#F2C55A" opacity="0.9"/>
+              <ellipse cx="22" cy="40" rx="2.5" ry="2" fill="#E8A820" opacity="0.7"/>
+            </g>
           </svg>
           <div>
             <!-- EDIT: Change to your blog name -->
@@ -54,6 +59,127 @@
 
     <!-- Welcome banner -->
     <section class="welcome-section">
+
+      <!-- Hero crocus: blooms automatically, click to replay -->
+      <div class="hero-crocus-wrap">
+        <svg class="hero-crocus" id="hero-crocus" viewBox="0 0 280 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="番红花，点击重新绽放">
+          <defs>
+            <linearGradient id="hero-po" x1="0%" y1="100%" x2="0%" y2="0%">
+              <stop offset="0%" style="stop-color:#8a4a7c"/>
+              <stop offset="100%" style="stop-color:#d7a3c8"/>
+            </linearGradient>
+            <linearGradient id="hero-pi" x1="0%" y1="100%" x2="0%" y2="0%">
+              <stop offset="0%" style="stop-color:#a8709a"/>
+              <stop offset="100%" style="stop-color:#e6c0da"/>
+            </linearGradient>
+            <linearGradient id="hero-pb" x1="0%" y1="100%" x2="0%" y2="0%">
+              <stop offset="0%" style="stop-color:#7a3d6e"/>
+              <stop offset="100%" style="stop-color:#c98fb8"/>
+            </linearGradient>
+            <linearGradient id="hero-sg" x1="0%" y1="100%" x2="0%" y2="0%">
+              <stop offset="0%" style="stop-color:#c0392b"/>
+              <stop offset="50%" style="stop-color:#e67e22"/>
+              <stop offset="100%" style="stop-color:#f39c12"/>
+            </linearGradient>
+            <radialGradient id="hero-ag" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" style="stop-color:#f9e79f"/>
+              <stop offset="100%" style="stop-color:#f4d03f"/>
+            </radialGradient>
+            <linearGradient id="hero-leafGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#5a8060"/>
+              <stop offset="100%" style="stop-color:#8fb898"/>
+            </linearGradient>
+            <linearGradient id="hero-pc" x1="0%" y1="100%" x2="0%" y2="0%">
+              <stop offset="0%" style="stop-color:#c495b0"/>
+              <stop offset="100%" style="stop-color:#f0d5e4"/>
+            </linearGradient>
+          </defs>
+
+          <ellipse cx="140" cy="288" rx="20" ry="3.5" fill="#d8d0c8" opacity="0.3" />
+
+          <g class="sway">
+            <!-- stem + leaves: kept small, just a quiet support for the flower -->
+            <path class="stem" d="M140,288 Q142,260 140,235" />
+            <path class="leaf" d="M140,281 Q125,263 120,242 Q129,251 140,274 Z" />
+            <path class="leaf-back" d="M140,276 Q155,259 161,239 Q153,249 140,270 Z" />
+
+            <!-- flower head: scaled up so it reads as the star of the piece -->
+            <g class="flower-head" transform="translate(140,235) scale(1.18) translate(-140,-235)">
+              <path class="sepal" d="M132,237 L140,225 L148,237 L140,243 Z" />
+
+              <!-- bud shell: 3 wide overlapping panels (same trick as the header logo) —
+                   this is what's visible while closed; it dissolves away as the real
+                   9-petal bloom fades in and opens -->
+              <g class="bud-shell">
+                <ellipse style="--shell-angle:-20deg" cx="140" cy="196" rx="15" ry="39" fill="url(#hero-pb)"/>
+                <ellipse style="--shell-angle:20deg" cx="140" cy="196" rx="15" ry="39" fill="url(#hero-pb)"/>
+                <ellipse style="--shell-angle:0deg" cx="140" cy="196" rx="15" ry="39" fill="url(#hero-po)"/>
+              </g>
+
+              <!-- innermost petals: painted first (behind everything), tucked close to the stamens -->
+              <path class="petal-innermost" style="--bud-angle:-3deg; --open-angle:-10deg; --petal-delay:0.3s;"
+                d="M140,235 Q131,214 128,195 Q130,186 135,190 Q138,196 140,235 Z" fill="url(#hero-pc)"/>
+              <path class="petal-innermost" style="--bud-angle:3deg; --open-angle:10deg; --petal-delay:0.35s;"
+                d="M140,235 Q149,214 152,195 Q150,186 145,190 Q142,196 140,235 Z" fill="url(#hero-pc)"/>
+              <path class="petal-innermost" style="--bud-angle:0deg; --open-angle:0deg; --petal-delay:0.4s;"
+                d="M140,235 Q140,213 140,192 Q140,182 140,187 Q140,192 140,235 Z" fill="url(#hero-pc)"/>
+
+              <!-- inner petals: painted next, on top of the innermost ring -->
+              <path class="petal-inner" style="--bud-angle:-4deg; --open-angle:-18deg; --petal-delay:0.15s;"
+                d="M140,235 Q127,203 124,173 Q127,160 134,165 Q138,173 140,235 Z" fill="url(#hero-pi)"/>
+              <path class="petal-stripe" d="M140,235 Q132,203 130,177"/>
+
+              <path class="petal-inner" style="--bud-angle:4deg; --open-angle:18deg; --petal-delay:0.2s;"
+                d="M140,235 Q153,203 156,173 Q153,160 146,165 Q142,173 140,235 Z" fill="url(#hero-pi)"/>
+              <path class="petal-stripe" d="M140,235 Q148,203 150,177"/>
+
+              <path class="petal-inner" style="--bud-angle:0deg; --open-angle:0deg; --petal-delay:0.25s;"
+                d="M140,235 Q140,205 140,177 Q140,163 140,170 Q140,178 140,235 Z" fill="url(#hero-pi)"/>
+              <path class="petal-stripe" d="M140,235 L140,180"/>
+
+              <!-- outer petals: painted last (frontmost), the widest ring — these are what
+                   wraps around and hides the seams of the inner rings when the bud is closed -->
+              <path class="petal-outer" style="--bud-angle:-8deg; --open-angle:-34deg; --petal-delay:0s;"
+                d="M140,235 Q120,200 117,165 Q120,147 130,155 Q138,163 140,235 Z" fill="url(#hero-pb)"/>
+              <path class="petal-stripe" d="M140,235 Q130,200 127,170"/>
+              <path class="petal-stripe" d="M140,235 Q126,203 124,175"/>
+
+              <path class="petal-outer" style="--bud-angle:8deg; --open-angle:34deg; --petal-delay:0.05s;"
+                d="M140,235 Q160,200 163,165 Q160,147 150,155 Q142,163 140,235 Z" fill="url(#hero-pb)"/>
+              <path class="petal-stripe" d="M140,235 Q150,200 153,170"/>
+              <path class="petal-stripe" d="M140,235 Q154,203 156,175"/>
+
+              <path class="petal-outer" style="--bud-angle:0deg; --open-angle:0deg; --petal-delay:0.1s;"
+                d="M140,235 Q140,197 140,160 Q140,145 140,152 Q140,160 140,235 Z" fill="url(#hero-po)"/>
+              <path class="petal-stripe" d="M140,235 L140,167"/>
+
+              <!-- stigma + anther: revealed once petals open, painted on top of all petals -->
+              <g class="stigma">
+                <path d="M140,225 Q136,213 134,203 Q133,197 136,195 Q140,197 140,203 Q140,197 144,195 Q147,197 146,203 Q144,213 140,225 Z" fill="url(#hero-sg)"/>
+                <ellipse cx="136" cy="200" rx="1" ry="2.5" fill="#f5b041" opacity="0.5" transform="rotate(-12 136 200)"/>
+                <ellipse cx="144" cy="200" rx="1" ry="2.5" fill="#f5b041" opacity="0.5" transform="rotate(12 144 200)"/>
+              </g>
+              <g class="anther">
+                <circle cx="134" cy="217" r="2" fill="url(#hero-ag)"/>
+                <circle cx="146" cy="217" r="2" fill="url(#hero-ag)"/>
+                <circle cx="140" cy="221" r="1.6" fill="url(#hero-ag)"/>
+                <line x1="134" y1="217" x2="138" y2="229" stroke="#7a9a7a" stroke-width="0.6" opacity="0.5"/>
+                <line x1="146" y1="217" x2="142" y2="229" stroke="#7a9a7a" stroke-width="0.6" opacity="0.5"/>
+                <line x1="140" y1="221" x2="140" y2="230" stroke="#7a9a7a" stroke-width="0.6" opacity="0.5"/>
+              </g>
+
+              <ellipse class="dew" cx="126" cy="170" rx="1.5" ry="2.8" transform="rotate(-15 126 170)" />
+              <ellipse class="dew" cx="154" cy="173" rx="1.3" ry="2.5" transform="rotate(10 154 173)" />
+              <ellipse class="dew" cx="140" cy="155" rx="1.2" ry="2.2" />
+
+              <circle class="sparkle" cx="120" cy="185" r="1" style="--tx:8px;--ty:-12px;"/>
+              <circle class="sparkle" cx="160" cy="180" r="0.8" style="--tx:-6px;--ty:-10px; animation-delay:0.5s;"/>
+              <circle class="sparkle" cx="140" cy="147" r="0.6" style="--tx:4px;--ty:-8px; animation-delay:1s;"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+
       <h2>Welcome ✿</h2>
       <p>Every garden starts with a single bulb pushing through soil no one thought would thaw. This little blog is my crocus moment — small, stubborn, and quietly reaching for light.</p>
     </section>
@@ -349,5 +475,6 @@
   </footer>
 
 <script src="visitor-badge.js"></script>
+<script src="crocus-bloom.js"></script>
 </body>
 </html>
